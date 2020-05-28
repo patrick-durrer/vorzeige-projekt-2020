@@ -1,20 +1,29 @@
+[staticMenu]
+code = "mainmanu"
 ==
 <!DOCTYPE html>
 <html lang="de">
 <head>
-	{% partial 'meta' %}
-	<link rel="stylesheet" href="{{ 'assets/default.css' | theme }}">
-	{% styles %}
+    {% partial 'meta' %}
+    <link rel="stylesheet" href="{{ 'assets/default.css' | theme }}">
 </head>
 <body>
-    <!-- Header -->
-	<h2>Standardlayout - {{ this.page.title }}</h2>
+    <header>
+        <div class="container">
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <img src="{{ 'assets/logo_dark.svg' | theme }}" alt="Logo Kursito">
+                </div>
+                <nav class="column is-three-quarters navigation">
+                    {% component 'staticMenu' %}
+                </nav>
+            </div>
+        </div>
+    </header>
 
     <!-- Content -->
 	{% page %}
 
-    <!-- Scripts -->
-	<script src="{{ [ '@jquery', '@framework' ] | theme }}"></script>
-	{% scripts %}
+    {% partial 'scripts' %}
 </body>
 </html>

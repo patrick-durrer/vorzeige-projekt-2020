@@ -1,0 +1,50 @@
+name: Mainmanu
+items:
+    -
+        title: Startseite
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: startseite
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Lernblog
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: lernblog
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: FAQ
+        type: cms-page
+        code: ''
+        reference: faq
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Kontakt
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: kontakt
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

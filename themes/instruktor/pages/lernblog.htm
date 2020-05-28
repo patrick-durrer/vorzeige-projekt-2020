@@ -1,0 +1,36 @@
+title = "Lernblog"
+url = "/lernblog"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 999
+noPostsMessage = "Momentan gibt es keine Artikel zu diesem Thema."
+sortOrder = "published_at desc"
+categoryPage = "faq"
+postPage = "blog-details"
+==
+{% set posts = blogPosts.posts %}
+
+<ul class="post-list">
+    {% for post in posts %}
+        <li class="columns">
+            
+            <div class="column is-one-quarter">
+                <div>
+                    {{ post.published_at|date('d') }}<br>
+                    {{ post.published_at|date('M') }}
+                </div>
+            </div>
+            <div class="column is-two-quarters">
+                <h3>{{ post.title }}</h3>
+                <p class="excerpt">{{ post.summary|raw }}</p>
+                <a href="{{ post.url }}">Lies weiter zu diesem Blogthema »</a>    
+            </div>
+            <div class="column is-one-quarter">
+                BILD
+            </div>
+        </li>
+    {% endfor %}
+</ul>

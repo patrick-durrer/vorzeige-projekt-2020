@@ -1,3 +1,5 @@
+[staticMenu]
+code = "mainmanu"
 ==
 <!DOCTYPE html>
 <html lang="de">
@@ -13,14 +15,7 @@
                     <img src="{{ 'assets/logo_dark.svg' | theme }}" alt="Logo Kursito">
                 </div>
                 <nav class="column is-three-quarters navigation">
-                    <ul>
-                        <li><a href="#">Startseite</a></li>
-                        <li><a href="#">Lernblog</a></li>
-                        <li><a href="#">Kurse</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Coaches</a></li>
-                        <li><a href="#">Kontakt</a></li>
-                    </ul>
+                    {% component 'staticMenu' %}
                 </nav>
             </div>
         </div>
