@@ -1,0 +1,20 @@
+==
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	{% partial 'meta' %}
+	<link rel="stylesheet" href="{{ 'assets/default.css' | theme }}">
+	{% styles %}
+</head>
+<body>
+    <!-- Header -->
+	<h2>Standardlayout - {{ this.page.title }}</h2>
+
+    <!-- Content -->
+	{% page %}
+
+    <!-- Scripts -->
+	<script src="{{ [ '@jquery', '@framework' ] | theme }}"></script>
+	{% scripts %}
+</body>
+</html>

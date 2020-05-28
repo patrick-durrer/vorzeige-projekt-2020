@@ -1,0 +1,10 @@
+.navigation ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navigation ul li a {
+    padding: 0 20px;    
+}
